@@ -203,3 +203,20 @@ var objectName = {
 };
 ```
 ### 프로퍼티와 메소드
+
+## jquery라이브러리
+- cdn 가져오기: 
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+``ㅁ`
+ ```js
+var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+            alist[i].style.color = color;
+            i += 1;
+        }
+```
+```js
+$('a').css('color', color);
+```
