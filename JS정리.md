@@ -83,3 +83,7 @@ CSS
 ## 변수와 대입 연산자
 - variable vs constant
 - `var 변수명 = 값;`
+
+## 제어할 태그 선택하기
+- 버튼을 클릭 시 body태그의 css 속성을 바꿔야 한다.
+- `document.querySelector("선택자").style.속성설정;`
