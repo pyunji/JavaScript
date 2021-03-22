@@ -91,6 +91,7 @@ CSS
 ## 프로그램, 프로그래밍, 프로그래머
 - HTML은 컴퓨터 언어이지만 컴퓨터 프로그래밍 언어는 아니다.
 - JS는 컴퓨터 언어이면서 컴퓨터 프로그래밍 언어이다.
+- 프로그램이란 시간 순서가 포함된 개념이다.
 ## 문법
 ### if...else if...else문
 ```js
@@ -208,7 +209,7 @@ var objectName = {
 - cdn 가져오기: 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-``ㅁ`
+```
  ```js
 var alist = document.querySelectorAll('a');
         var i = 0;
@@ -220,3 +221,17 @@ var alist = document.querySelectorAll('a');
 ```js
 $('a').css('color', color);
 ```
+
+## UI vs API
+- API: `alert()`처럼 애플리케이션을 만들기 위해 프로그래밍할 때 사용하는 조작 장치들
+
+## 검색어
+- `document`: 태그를 삭제하거나 자식태르를 추가하고 싶다면
+- `DOM` 찾아도 안나온다면
+- `window`: 현재 웹 주소나, 창크기를 알아야한다면
+- `cookie`: 리로드되어도 현상태를 유지하고 싶다면
+- `offline web application`: 인터넷이 끊겨도 동작하고 싶다면
+- `webRTC`: 화상 웹을 만들고 싶다면
+- `speech`: 음성인식이나 음성으로 정보를 전달하고 싶다면,
+- `webGL`: 3차원 그래픽으로 게임과 같은 것을 만들고 싶다면,
+- `webVR`: 가상현실에 관심이 있다면
