@@ -87,3 +87,109 @@ CSS
 ## 제어할 태그 선택하기
 - 버튼을 클릭 시 body태그의 css 속성을 바꿔야 한다.
 - `document.querySelector("선택자").style.속성설정;`
+
+## 프로그램, 프로그래밍, 프로그래머
+- HTML은 컴퓨터 언어이지만 컴퓨터 프로그래밍 언어는 아니다.
+- JS는 컴퓨터 언어이면서 컴퓨터 프로그래밍 언어이다.
+## 문법
+### if...else if...else문
+```js
+if (condition) {
+  code to run if condition is true
+} else {
+  run some other code instead
+}
+```
+### 비교연산자
+|비교연산자|의미|
+|---|---|
+|`===`, `!==`|한 값이 다른 값과 같거나 다른지 테스트 한다.|
+|`<`, `>`|한 값이 다른 값보다 작은지 큰지 테스트 한다.|
+|`<=`, `>=`|한 값이 다른 값보다 작거나 같은지, 크거나 같은지 테스트 한다|
+
+### 논리연산자
+|논리연산자|의미|
+|---|---|
+|`&&`|AND|
+|`||`|OR|
+|`!`|NOT|
+
+### switch 문
+```js
+switch (expression) {
+  case choice1:
+    run this code
+    break;
+
+  case choice2:
+    run this code instead
+    break;
+
+  // include as many cases as you like
+
+  default:
+    actually, just run this code
+}
+```
+## 리팩토링
+```js
+<input id="night_day" type="button" value="night" onclick="
+    if(document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#night_day').value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#night_day').value = 'night';
+    }
+
+">
+```
+- this의 사용으로 중복 제거
+```js
+<input type="button" value="night" onclick="
+    if(this.value === 'night'){
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        this.value = 'day';
+    } else {
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        this.value = 'night';
+    }
+
+">
+```
+- 또 중복되는 것을 지구끝까지 쫓아가서 제거 ㅋㅋㅋㅋ
+    - 변수의 사용
+```html
+<input type="button" value="night" onclick="
+    var target = document.querySelector('body');
+    if(this.value === 'night'){
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        this.value = 'day';
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        this.value = 'night';
+    }
+
+">
+```
+## 함수
+### 함수의 기본 문법
+```js
+function myFunction(){
+    do something
+}
+```
+### Parameter & Argument
+- 매개변수(parameter): 사용자에게 전달받은 값을 저장하며 함수 내에서 사용되는 변수 이름
+- 인자(argument): 매개변수에 전달된 값 자체
+
+### return
+
+### this, self
+- 독립된 함수로 만들었다면 this(지역)와 self(전역)를 잘 사용해야함
