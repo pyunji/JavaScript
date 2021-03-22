@@ -193,3 +193,13 @@ function myFunction(){
 
 ### this, self
 - 독립된 함수로 만들었다면 this(지역)와 self(전역)를 잘 사용해야함
+- 메소드나 프로퍼티가 속해있는 객체를 지칭할 때 this로 표현함.
+## 객체
+```js
+var objectName = {
+  member1Name: member1Value,
+  member2Name: member2Value,
+  member3Name: member3Value
+};
+```
+### 프로퍼티와 메소드
